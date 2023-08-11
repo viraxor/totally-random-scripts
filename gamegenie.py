@@ -1,11 +1,13 @@
 import random
 alphabet = list("AEPOZXLUGKISTVYN")
-
-char_num = 6
+alphabet_zero = list("APZLGITY")
 
 with open("gamegenie.gen", "w") as f:
     string = ""
-    for i in range(char_num):
+    for i in range(2):
         string += random.choice(alphabet)
+    string += random.choice(alphabet_zero)    
+    for i in range(3):
+        string += random.choice(alphabet) 
     
     f.write(string)
